@@ -1,0 +1,191 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #303030;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  background: #303030;
+  color: white;
+  text-align: left;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Estatísticas */
+.stats {
+  background: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+  gap: 20px;
+}
+
+.stats h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* Sobre */
+.sobre {
+  padding: 60px 20px;
+  background: white;
+}
+
+/* Seção Sobre - Item (centralizado, texto à esquerda, imagem à direita) */
+.sobre .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;       /* centraliza verticalmente */
+  justify-content: center;   /* centraliza o conjunto no container */
+  gap: 80px;                 /* espaço entre texto e imagem */
+  padding: 20px 0;
+}
+
+.sobre .item-text {
+  flex: 0 0 50%;             /* ocupa 50% do espaço à esquerda */
+  max-width: 600px;          /* limita a largura do texto */
+  text-align: left;
+}
+
+.sobre .item-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #303030;
+}
+
+.sobre .item-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555555;
+}
+
+.sobre .item-img {
+  flex: 0 0 40%;             /* ocupa 40% do espaço à direita */
+  max-width: 500px;          /* largura máxima da imagem */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .sobre .item {
+    gap: 40px;
+  }
+
+  .sobre .item-text {
+    flex: 0 0 55%;
+  }
+
+  .sobre .item-img {
+    flex: 0 0 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre .item {
+    flex-direction: column;   /* empilha em telas pequenas */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .sobre .item-img {
+    width: 80%;
+    margin-top: 15px;
+  }
+}
+
+/* Formulário */
+.formulario {
+  background: #303030;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.formulario h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form input {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+}
+
+.form button {
+  padding: 12px;
+  border: none;
+  background: #f4a261;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #e6892f;
+}
+
+/* Seção Sobre - Grid complementar (se houver) */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.sobre-texto h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.sobre-texto p {
+  font-size: 16px;
+  color: #555;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  border-radius: 8px;
+}
